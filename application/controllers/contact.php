@@ -20,7 +20,7 @@ class Contact extends CI_Controller {
 	}
 	
 	function submit(){
-	
+		
 	
 		//capturing data posted from contact form
 		$name = $this->input->post('name');
@@ -68,3 +68,4 @@ class Contact extends CI_Controller {
 	}
 	
 }
+

@@ -16,6 +16,7 @@ class Home extends CI_Controller {
 			$data['records'] = $query;
 			
 		}
+		
 		$this->load->view('includes/template',$data);
 		
 		
