@@ -42,9 +42,9 @@ $active_group = 'default';
 $active_record = TRUE;
 
 $db['default']['hostname'] = 'localhost';
-$db['default']['username'] = 'root';
-$db['default']['password'] = 'sniper';
-$db['default']['database'] = 'codeballistic_db';
+$db['default']['username'] = 'codeball_admin';
+$db['default']['password'] = 'codeballistic_db_admin';
+$db['default']['database'] = 'codeball_codeballistic_db';
 $db['default']['dbdriver'] = 'mysql';
 $db['default']['dbprefix'] = '';
 $db['default']['pconnect'] = TRUE;
