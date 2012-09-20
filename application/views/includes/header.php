@@ -1,36 +1,39 @@
-<?php echo doctype('html5');?>
+<!DOCTYPE HTML>
+<html lang="en-US">
 <head>
-<meta charset="UTF-8">
-<?php 
-	//todo: meta tag verify attribute
-	$meta = array(
-		array('name'=>'author', 'content'=>'CodeBallistic'),
-		
-		array('name' => 'Content-type', 'content' => 'text/html; charset=utf-8', 'type' => 'equiv'),
-		
-		array('name'=>'description','content'=>'codeballistic limited portfolio where great projects are being developped '),
-		array('name'=>'keywords','content'=>'portfolio,protfolio,web,programmation,website,site,codeballistic,code ballistic, codeballstic, code ballstic,code-ballistic,CodeBallistic,Codeballistic,codeBallistic,dev,development,develop,php,PHP,javscript,javascript,jquery,jQuery,JQUERY,ajanx,ajax,Ajax,AJAX,codes,codings,google,gogle,goggle,yahoo,yaahoo,bing,beeing,beeg,beeng,ask,msn,msm,facebook,plus,design,logo,booking,templates,template,book,designs,logs,logos,psd,photoshop,tags,object,class,function,w3c,firebug,web developper, web dev, web developer, web programming, web programmation, buy , contact , email , notepad++,notepad,dreamweaver,serer,server,xampp,wamp,mamp,tutorials,gallery,photos,images,beautiful,cool,top,great,fun,thanks,thankyou,thank you,gradient,new,transparance,transpace,transparency,internet,francais,time,deliverable,services,about,about us,us, contact, trendy,mauritius,maurice,island,mauritius island, ile maurice,programmeur,programmeurs,low, cheap, free, hosting'),
-		array('name'=>'robots','content'=>'all')
-		
-		
-	);
-	echo meta($meta);
-?>
+	<meta charset="UTF-8">	<title>CodeBallistic</title>
 
-<?php echo link_tag('css/reset.css');?>
-<?php echo link_tag('css/text.css');?>
-<?php echo link_tag('css/960.css');?>
-<?php echo link_tag('css/styles.css');?>
-<link rel="shortcut icon" type="image/x-icon" href="<?php echo base_url(); ?>favicon.ico">
+<!-- ============================CSS===================== -->
+	<link rel="stylesheet" href="<?php echo base_url() ?>css/reset.css" type="text/css">
+	<link rel="stylesheet" href="<?php echo base_url() ?>css/text.css" type="text/css">
+	<link rel="stylesheet" href="<?php echo base_url() ?>css/960.css" type="text/css">
+	<link rel="stylesheet" href="<?php echo base_url() ?>css/colorbox.css" type="text/css">
+	<link rel="stylesheet" href="<?php echo base_url() ?>css/photogallery.css" type="text/css">
+	<link rel="stylesheet" href="<?php echo base_url() ?>css/buttons.css" type="text/css">
+	<link rel="stylesheet" href="<?php echo base_url() ?>css/styles.css" type="text/css">
+	<link rel="shortcut icon" type="image/x-icon" href="<?php echo base_url() ?>images/icons/favicon.ico">
+<!-- ==================JAVASCRIPT======================== -->
+	<script type="text/javascript" src="<?php echo base_url() ?>js/jquery.js"></script>	
+	<script type="text/javascript" src="<?php echo base_url() ?>js/libs/modernizr-2.5.3.min.js"></script>	
+	<script type="text/javascript" src="<?php echo base_url() ?>js/cufon-yui.js"></script>
+	<script type="text/javascript" src="<?php echo base_url() ?>js/Trajan_Pro_400.font.js"></script>
+	<script type="text/javascript" src="<?php echo base_url() ?>js/Open_Sans_400.font.js"></script>
+	<script type="text/javascript" src="<?php echo base_url() ?>js/colorbox.min.js"></script>
 
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.6.2/jquery.min.js"></script>
-<script src="<?php echo base_url();?>js/jquery-1.6.2.min.js"></script>
-<script src="<?php echo base_url();?>js/scripts.js"></script>
+	<script type="text/javascript" src="<?php echo base_url() ?>js/scripts.js"></script>
 
-<title>CodeBallistic - Home</title>
 </head>
 <body>
-	<div id="wrapper" class="container_12">
-	<?php $this->load->view('includes/top-menu');?>
+
+<div id="header-wrap">
+	<header class="container_16">
+		<a href="<?php echo base_url() ?>" id="logo" class="grid_4">
+			<img src="<?php echo base_url() ?>images/logo.png" alt="Codeballistic">
+		</a>
+		<?php $this->load->view('includes/top-menu');?>
+
+	</header>
+</div>
+<div class="line"></div>
 	
 	

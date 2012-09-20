@@ -51,18 +51,61 @@ class Contact extends CI_Controller {
 			
 		}else{
 		
-		//Sending mail to codeballistic's admins.
+		
+
+			/*custom mail configs respective to server*/
+			$config['protocol'] = 'sendmail';
+			$config['mailpath'] = '/usr/sbin/sendmail';
+			$config['charset'] = 'utf-8';
+			$config['wordwrap'] = TRUE;
+
+
+			/*switch case to values caught from the dropdown list and reformating */
+
+			switch ($subject) {
+				case 'mobileapp':
+					$subject = 'Mobile App Development';
+					break;
+
+				case 'webapp':
+					$subject = 'Web App Development';
+					break;
+
+				case 'ecommerce':
+					$subject = 'E-commerce Website';
+					break;
+
+				case 'webdesignCMS':
+					$subject = 'Web Design / CMS';
+					break;
+
+				case 'others':
+					$subject = 'Others';
+					break;
+
+				default:
+					break;
+			}
+
+			/*initialize mail with custom configs*/
+			$this->email->initialize($config);
 		
 			$this->email->from($email,$name);
-			$this->email->to('arvesh9@gmail.com');
+			$this->email->to(CONTACT_EMAIL);
 			$this->email->subject($subject);
-			$this->email->message($message);
+				$this->email->message($message);
+
+			//Sending mail to codeballistic's admins.
 			$this->email->send();
 			
-			//redirect to 'thanks you' page.
 			
-			$data['main_content'] = 'contact_submitted';
-			$this->load->view('includes/template',$data);
+			/*set confirmation msg*/
+			$this->session->set_flashdata(
+				'success', 
+				"<h1>Thank You for contacting us.</h1><h4>We will get back to you as soon as possible.</h4>"
+			);
+			/*redirect with confirmation msg.*/
+			redirect('contact');
 		}
 		
 	}
